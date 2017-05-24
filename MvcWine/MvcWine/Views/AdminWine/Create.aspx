@@ -1,0 +1,52 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcWine.Models.Wine>" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Create
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>
+        Create</h2>
+    <% using (Html.BeginForm())
+       {%>
+    <%= Html.ValidationSummary(true) %>
+    <fieldset>
+        <legend>Fields</legend>
+        <div class="editor-label">
+            <%= Html.LabelFor(model => model.WineType) %>
+        </div>
+        <div class="editor-field">
+            <%= Html.TextBoxFor(model => model.WineType) %>
+            <%= Html.ValidationMessageFor(model => model.WineType) %>
+        </div>
+        <div class="editor-label">
+            <%= Html.LabelFor(model => model.IntroText) %>
+        </div>
+        <div class="editor-field">
+            <%= Html.TextAreaFor(model => model.IntroText, new { @class="Intro"})%>
+            <%= Html.ValidationMessageFor(model => model.IntroText) %>
+        </div>
+        <div class="editor-field">
+            上传图片：
+            <input type="file" id="PhotoUrl" name="Country" />
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+    <% } %>
+    <div>
+        <%= Html.ActionLink("Back to List", "Index") %>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+        $("#PhotoUrl").makeAsyncUploader({
+        upload_url: "/Utility/AsyncUpload ", // Important! This isn't a directory, it's a HANDLER such as an ASP.NET MVC action method, or a PHP file, or a Classic ASP file, or an ASP.NET .ASHX handler. The handler should save the file to disk (or database).
+                flash_url: '../../Scripts/swfupload.swf',
+                button_image_url: '../../Image/blankButton.png'
+                
+            });
+        });        
+    </script>
+
+</asp:Content>

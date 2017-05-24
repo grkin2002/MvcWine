@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="WineDB" Class="WineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\WineDB.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WineDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cart" Member="Cart">
+    <Type Name="Cart">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CartId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Product_Cart" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="Country">
+    <Type Name="Country">
+      <Column Name="CountryCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Country_Region" Member="Region" ThisKey="CountryCode" OtherKey="CountryCode" Type="Region" />
+      <Association Name="Country_SubRegion" Member="SubRegion" ThisKey="CountryCode" OtherKey="CountryCode" Type="SubRegion" />
+      <Association Name="Country_Product" Member="Product" ThisKey="CountryCode" OtherKey="CountryCode" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grape" Member="Grape">
+    <Type Name="Grape">
+      <Column Name="GrapeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GrapeType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Grape_Product" Member="Product" ThisKey="GrapeId" OtherKey="GrapeId" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MCity" Member="MCity">
+    <Type Name="MCity">
+      <Column Name="MCityCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MCityName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MProvinceCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="MCity_Order" Member="Order" ThisKey="MCityCode" OtherKey="MCityCode" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MCountry" Member="MCountry">
+    <Type Name="MCountry">
+      <Column Name="MCountryCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MCountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MCountry_Order" Member="Order" ThisKey="MCountryCode" OtherKey="MCountryCode" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MProvince" Member="MProvince">
+    <Type Name="MProvince">
+      <Column Name="MProvinceCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MProvinceName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MCountryCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="MProvince_Order" Member="Order" ThisKey="MProvinceCode" OtherKey="MProvinceCode" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Order">
+    <Type Name="Order">
+      <Column Name="OrderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MCityCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MProvinceCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MPostalCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MCountryCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="OrderDetail" ThisKey="OrderId" OtherKey="OrderId" Type="OrderDetail" />
+      <Association Name="MCity_Order" Member="MCity" ThisKey="MCityCode" OtherKey="MCityCode" Type="MCity" IsForeignKey="true" />
+      <Association Name="MCountry_Order" Member="MCountry" ThisKey="MCountryCode" OtherKey="MCountryCode" Type="MCountry" IsForeignKey="true" />
+      <Association Name="MProvince_Order" Member="MProvince" ThisKey="MProvinceCode" OtherKey="MProvinceCode" Type="MProvince" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetail">
+    <Type Name="OrderDetail">
+      <Column Name="OrderDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="productId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="OrderId" OtherKey="OrderId" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Producer" Member="Producer">
+    <Type Name="Producer">
+      <Column Name="ProducerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProducerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Producer_Product" Member="Product" ThisKey="ProducerId" OtherKey="ProducerId" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Region" Member="Region">
+    <Type Name="Region">
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Region_SubRegion" Member="SubRegion" ThisKey="RegionCode" OtherKey="RegionCode" Type="SubRegion" />
+      <Association Name="Region_Product" Member="Product" ThisKey="RegionCode" OtherKey="RegionCode" Type="Product" />
+      <Association Name="Country_Region" Member="Country" ThisKey="CountryCode" OtherKey="CountryCode" Type="Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubRegion" Member="SubRegion">
+    <Type Name="SubRegion">
+      <Column Name="SubRegionCode" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubRegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="SubRegion_Product" Member="Product" ThisKey="SubRegionCode" OtherKey="SubRegionCode" Type="Product" />
+      <Association Name="Country_SubRegion" Member="Country" ThisKey="CountryCode" OtherKey="CountryCode" Type="Country" IsForeignKey="true" />
+      <Association Name="Region_SubRegion" Member="Region" ThisKey="RegionCode" OtherKey="RegionCode" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplier" Member="Supplier">
+    <Type Name="Supplier">
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HomePage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Supplier_ProductSupp" Member="ProductSupp" ThisKey="SupplierId" OtherKey="SupplierId" Type="ProductSupp" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Wine" Member="Wine">
+    <Type Name="Wine">
+      <Column Name="WineId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WineType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Wine_Product" Member="Product" ThisKey="WineId" OtherKey="WineId" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Promote" Member="Promote">
+    <Type Name="Promote">
+      <Column Name="PromoteType" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Promote_Product" Member="Product" ThisKey="PromoteType" OtherKey="PromoteType" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Taste" Member="Taste">
+    <Type Name="Taste">
+      <Column Name="TasteType" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TasteDesc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Taste_Product" Member="Product" ThisKey="TasteType" OtherKey="TasteType" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductSupp" Member="ProductSupp">
+    <Type Name="ProductSupp">
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Supplier_ProductSupp" Member="Supplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="Supplier" IsForeignKey="true" />
+      <Association Name="Product_ProductSupp" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Product">
+    <Type Name="Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="RegionCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="SubRegionCode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GrapeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WineId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProducerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PromoteType" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DrinkStart" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DrinkEnd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TasteType" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="VOL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CapTypeId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Vintage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Package" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InStock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Valid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IntroText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Product_Cart" Member="Cart" ThisKey="ProductId" OtherKey="ProductId" Type="Cart" />
+      <Association Name="Product_ProductSupp" Member="ProductSupp" ThisKey="ProductId" OtherKey="ProductId" Type="ProductSupp" />
+      <Association Name="Country_Product" Member="Country" ThisKey="CountryCode" OtherKey="CountryCode" Type="Country" IsForeignKey="true" />
+      <Association Name="Grape_Product" Member="Grape" ThisKey="GrapeId" OtherKey="GrapeId" Type="Grape" IsForeignKey="true" />
+      <Association Name="Producer_Product" Member="Producer" ThisKey="ProducerId" OtherKey="ProducerId" Type="Producer" IsForeignKey="true" />
+      <Association Name="Promote_Product" Member="Promote" ThisKey="PromoteType" OtherKey="PromoteType" Type="Promote" IsForeignKey="true" />
+      <Association Name="Region_Product" Member="Region" ThisKey="RegionCode" OtherKey="RegionCode" Type="Region" IsForeignKey="true" />
+      <Association Name="SubRegion_Product" Member="SubRegion" ThisKey="SubRegionCode" OtherKey="SubRegionCode" Type="SubRegion" IsForeignKey="true" />
+      <Association Name="Taste_Product" Member="Taste" ThisKey="TasteType" OtherKey="TasteType" Type="Taste" IsForeignKey="true" />
+      <Association Name="Wine_Product" Member="Wine" ThisKey="WineId" OtherKey="WineId" Type="Wine" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

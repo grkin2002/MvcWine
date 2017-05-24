@@ -1,0 +1,264 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C57BD5CD-646A-4A44-8968-D04117E683CE}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcWine</RootNamespace>
+    <AssemblyName>MvcWine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MvcPager, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6872c5a09aed72c, processorArchitecture=MSIL" />
+    <Reference Include="MvcSiteMapProvider, Version=2.0.0.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC 2\\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminCountryController.cs" />
+    <Compile Include="Controllers\AdminProductController.cs" />
+    <Compile Include="Controllers\AdminPromoteController.cs" />
+    <Compile Include="Controllers\AdminSubregionController.cs" />
+    <Compile Include="Controllers\AdminTasteController.cs" />
+    <Compile Include="Controllers\ListController.cs" />
+    <Compile Include="Controllers\AdminGrapeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminMadeByController.cs" />
+    <Compile Include="Controllers\UtilityController.cs" />
+    <Compile Include="Controllers\AdminRegionController.cs" />
+    <Compile Include="Controllers\AdminWineController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConstName.cs" />
+    <Compile Include="Helpers\HtmlExtensions.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Helpers\DiskFileHandler.cs" />
+    <Compile Include="Models\IWineRepository.cs" />
+    <Compile Include="Models\Wine.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Wine.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WineRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\LocationService.asmx.cs">
+      <DependentUpon>LocationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewModels\ProductAdminViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\RegionAdminViewModel.cs" />
+    <Compile Include="ViewModels\SubRegionAdminViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\WineDB.mdf">
+    </Content>
+    <Content Include="App_Data\WineDB_log.ldf">
+      <DependentUpon>WineDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\MvcSiteMapProvider.dll" />
+    <Content Include="bin\MvcSiteMapProvider.pdb" />
+    <Content Include="Global.asax" />
+    <Content Include="Image\blankButton.png" />
+    <Content Include="Image\datepicker.gif" />
+    <Content Include="Scripts\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Scripts\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-asyncUpload-0.1.js" />
+    <Content Include="Scripts\jquery-ui-1.8.2.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="Scripts\swfupload.js" />
+    <Content Include="Scripts\swfupload.swf" />
+    <Content Include="Services\LocationService.asmx" />
+    <Content Include="UploadFile\NotFound.jpg" />
+    <Content Include="Views\AdminCountry\Create.aspx" />
+    <Content Include="Views\AdminCountry\Delete.aspx" />
+    <Content Include="Views\AdminCountry\Edit.aspx" />
+    <Content Include="Views\AdminCountry\Index.aspx" />
+    <Content Include="Views\AdminMadeBy\Create.aspx" />
+    <Content Include="Views\AdminMadeBy\Delete.aspx" />
+    <Content Include="Views\AdminMadeBy\Edit.aspx" />
+    <Content Include="Views\AdminProduct\CategoryUserControl.ascx" />
+    <Content Include="Views\AdminProduct\Create.aspx" />
+    <Content Include="Views\AdminProduct\Delete.aspx" />
+    <Content Include="Views\AdminProduct\DetailsUserControl.ascx" />
+    <Content Include="Views\AdminProduct\Edit.aspx" />
+    <Content Include="Views\AdminProduct\Index.aspx" />
+    <Content Include="Views\AdminProduct\LocationUserControl.ascx" />
+    <Content Include="Views\AdminProduct\TextPhotoUserControl.ascx" />
+    <Content Include="Views\AdminPromote\Create.aspx" />
+    <Content Include="Views\AdminPromote\Delete.aspx" />
+    <Content Include="Views\AdminPromote\Edit.aspx" />
+    <Content Include="Views\AdminPromote\Index.aspx" />
+    <Content Include="Views\AdminRegion\Index.aspx" />
+    <Content Include="Views\AdminSubregion\Create.aspx" />
+    <Content Include="Views\AdminSubregion\Delete.aspx" />
+    <Content Include="Views\AdminSubregion\Edit.aspx" />
+    <Content Include="Views\AdminSubregion\Index.aspx" />
+    <Content Include="Views\AdminTaste\Create.aspx" />
+    <Content Include="Views\AdminTaste\Delete.aspx" />
+    <Content Include="Views\AdminTaste\Edit.aspx" />
+    <Content Include="Views\AdminTaste\Index.aspx" />
+    <Content Include="Views\List\Index.aspx" />
+    <Content Include="Views\List\ListByCountry.aspx" />
+    <Content Include="Views\AdminGrape\Create.aspx" />
+    <Content Include="Views\AdminGrape\Delete.aspx" />
+    <Content Include="Views\AdminGrape\Edit.aspx" />
+    <Content Include="Views\AdminGrape\Index.aspx" />
+    <Content Include="Views\AdminRegion\Create.aspx" />
+    <Content Include="Views\AdminRegion\Delete.aspx" />
+    <Content Include="Views\AdminRegion\Edit.aspx" />
+    <Content Include="Views\AdminWine\Create.aspx" />
+    <Content Include="Views\AdminWine\Delete.aspx" />
+    <Content Include="Views\AdminWine\Edit.aspx" />
+    <Content Include="Views\AdminWine\Index.aspx" />
+    <Content Include="Views\AdminMadeBy\Index.aspx" />
+    <Content Include="Views\List\SortingUserControl.ascx" />
+    <Content Include="Views\List\TitleCountryUserControl.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Wine.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Wine.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Wine.dbml.layout">
+      <DependentUpon>Wine.dbml</DependentUpon>
+    </None>
+    <Content Include="bin\MvcPager.dll" />
+    <Content Include="bin\MvcSiteMapProvider.XML" />
+    <Content Include="Image\Add-to-basket-001mini.png" />
+    <Content Include="Image\list_item_background.gif" />
+    <Content Include="Mvc.sitemap" />
+    <Content Include="ProductFile\nopicture.gif" />
+    <Content Include="Views\List\ListByRegion.aspx" />
+    <Content Include="Views\List\ListBySubRegion.aspx" />
+    <Content Include="Views\List\ListProductUserControl.ascx" />
+    <Content Include="Views\List\TitleRegionUserControl.ascx" />
+    <Content Include="Views\List\TitleSubRegionUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1078</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,7 @@
+E:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\bin\MvcWine.dll
+E:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\bin\MvcWine.pdb
+E:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\obj\Debug\ResolveAssemblyReference.cache
+E:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\obj\Debug\MvcWine.dll
+E:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\obj\Debug\MvcWine.pdb
+e:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\bin\MvcSiteMapProvider.pdb
+e:\My Documents\Visual Studio 2008\Projects\MvcWine\MvcWine\bin\MvcSiteMapProvider.xml

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-2.0" enableLocalization="true">
+  <mvcSiteMapNode title="Home" controller="Home" action="Index" changeFrequency="Always" updatePriority="Normal">
+    <mvcSiteMapNode title="List" clickable="false">
+      <mvcSiteMapNode title="Browse Countries" controller="List" action="Index" key="List" />
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Admin" clickable="false">
+      <mvcSiteMapNode title ="AminCountry" controller="AdminCountry" action="Index" key="AdminCountry" />
+      <mvcSiteMapNode title ="AdminRegion" controller="AdminRegion" action="Index" key ="AdminRegion"/>
+      <mvcSiteMapNode title ="AdminSubregion" controller="AdminSubregion" action="Index" key="AdminSubRegion" />
+      <mvcSiteMapNode title ="AdminGrape" controller="AdminGrape" action="Index" key="AdminGrape"/>
+      <mvcSiteMapNode title ="AdminWine" controller="AdminWine" action="Index" key="AdminWine"/>
+      <mvcSiteMapNode title ="AdminProduct" controller="AdminProduct" action="Index" key="AdminProduct"/>
+      <mvcSiteMapNode title ="AdminProducer" controller="AdminMadeBy" action="Index" key="AdminMadeBy"/>
+      <mvcSiteMapNode title ="AdminPromote" controller="AdminPromote" action="Index" key="AdminPromote"/>
+      <mvcSiteMapNode title ="AdminTaste"  controller="AdminTaste"  action="Index" key="AdminTaste" />
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>
+

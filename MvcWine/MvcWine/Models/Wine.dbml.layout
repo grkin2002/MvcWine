@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.875, 16.375" name="Wine">
+  <DataContextMoniker Name="/WineDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d0cde7aa-b312-48be-926b-ca92a28b30fb" absoluteBounds="8.875, 8.5, 2, 1.6169661458333327">
+      <DataClassMoniker Name="/WineDataContext/Cart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38f35f81-ec1e-42ed-bfc8-9e785c29c101" absoluteBounds="8.89, 8.96, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a42f4170-4b68-425d-b674-87ffcfba922e" absoluteBounds="0.625, 3.625, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/WineDataContext/Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db31fa47-b944-45e4-b561-0818b38c9fbe" absoluteBounds="0.64, 4.085, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="451a8e82-407d-4618-b2ba-e795ae433c41" absoluteBounds="5.5, 0.875, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/WineDataContext/Grape" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32bc2e4d-1bf6-4c8b-b184-f5d7da696772" absoluteBounds="5.515, 1.335, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f27e5b7-48ed-47d2-8fdc-e60476924b82" absoluteBounds="0.75, 10.75, 2, 1.2797265624999987">
+      <DataClassMoniker Name="/WineDataContext/MCity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="092e2483-2c87-4f3b-bd43-6a44c7ed5f6d" absoluteBounds="0.765, 11.21, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="422f4b01-a37b-47df-a372-9415b0c36b41" absoluteBounds="0.75, 12.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/WineDataContext/MCountry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da8cc045-09ac-4297-b8b7-6f3eed10167d" absoluteBounds="0.765, 13.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d0fbcf9-a622-498b-b8ed-24af2ba7f385" absoluteBounds="0.75, 14.875, 2, 1.2797265625000005">
+      <DataClassMoniker Name="/WineDataContext/MProvince" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88f95800-8605-4757-9e2a-2824166f5459" absoluteBounds="0.765, 15.335, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b6cffe3-5156-4847-8f3f-38a879a9745e" absoluteBounds="3.5, 12, 2, 2.9659244791666666">
+      <DataClassMoniker Name="/WineDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e0cddce-f8bc-4be6-ae2f-8099f62549e7" absoluteBounds="3.515, 12.46, 1.9700000000000002, 2.4059244791666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb64c4a6-5e26-41c4-8b95-625e5a6c78e6" absoluteBounds="6.25, 12.625, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/WineDataContext/OrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84cb86a7-e15e-4351-b258-a58bfda34c26" absoluteBounds="6.265, 13.085, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17a5afb8-7912-458b-97b3-40b08df5c226" absoluteBounds="11.375, 0.5, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/WineDataContext/Producer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14232ce0-ccfe-4cf4-81f6-47786c1eae1b" absoluteBounds="11.39, 0.96000000000000085, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7f0cefb-7cc0-44dc-97db-90ffa21482d5" absoluteBounds="3.25, 2.125, 2, 1.6169661458333327">
+      <DataClassMoniker Name="/WineDataContext/Region" />
+      <nestedChildShapes>
+        <elementListCompartment Id="599226bf-80e4-441e-9e0a-683a9cca56a4" absoluteBounds="3.265, 2.585, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c616b58a-c84d-4549-a89f-ba2d35d4d8c6" absoluteBounds="6.25, 4.125, 2, 1.7855859375000005">
+      <DataClassMoniker Name="/WineDataContext/SubRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11726a70-b5b3-43ae-84ff-15a9f219b26c" absoluteBounds="6.265, 4.585, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc79f5be-fd14-4ee5-b37d-104c6638a988" absoluteBounds="12, 7.625, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/WineDataContext/Supplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d75549d7-d613-4a81-a5d6-e4f09934a1e8" absoluteBounds="12.015, 8.085, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 11.3749995); (4.5 : 11.3749995); (4.5 : 12)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/MCity/MCity_Order" />
+      <nodes>
+        <classShapeMoniker Id="7f27e5b7-48ed-47d2-8fdc-e60476924b82" />
+        <classShapeMoniker Id="6b6cffe3-5156-4847-8f3f-38a879a9745e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.4305533854167); (3.5 : 13.4305533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/MCountry/MCountry_Order" />
+      <nodes>
+        <classShapeMoniker Id="422f4b01-a37b-47df-a372-9415b0c36b41" />
+        <classShapeMoniker Id="6b6cffe3-5156-4847-8f3f-38a879a9745e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.5603260208333); (4.5 : 15.5603260208333); (4.5 : 14.9659244791667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/MProvince/MProvince_Order" />
+      <nodes>
+        <classShapeMoniker Id="7d0fbcf9-a622-498b-b8ed-24af2ba7f385" />
+        <classShapeMoniker Id="6b6cffe3-5156-4847-8f3f-38a879a9745e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 13.4334830729167); (6.25 : 13.4334830729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Order/Order_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="6b6cffe3-5156-4847-8f3f-38a879a9745e" />
+        <classShapeMoniker Id="cb64c4a6-5e26-41c4-8b95-625e5a6c78e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.625 : 3.625); (1.625 : 2.8749995); (3.25 : 2.8749995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Country/Country_Region" />
+      <nodes>
+        <classShapeMoniker Id="a42f4170-4b68-425d-b674-87ffcfba922e" />
+        <classShapeMoniker Id="c7f0cefb-7cc0-44dc-97db-90ffa21482d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 4.59917317708333); (4.19791916666667 : 4.59917317708333 : JumpStart); (4.36458583333333 : 4.59917317708333 : JumpEnd); (6.25 : 4.59917317708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Country/Country_SubRegion" />
+      <nodes>
+        <classShapeMoniker Id="a42f4170-4b68-425d-b674-87ffcfba922e" />
+        <classShapeMoniker Id="c616b58a-c84d-4549-a89f-ba2d35d4d8c6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.2812525 : 3.74196614583333); (4.2812525 : 5.37988205729167); (6.25 : 5.37988205729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Region/Region_SubRegion" />
+      <nodes>
+        <classShapeMoniker Id="c7f0cefb-7cc0-44dc-97db-90ffa21482d5" />
+        <classShapeMoniker Id="c616b58a-c84d-4549-a89f-ba2d35d4d8c6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="23dd2b6c-5353-49b8-86e5-316313a90b98" absoluteBounds="3, 6.5, 2, 1.4483463541666668">
+      <DataClassMoniker Name="/WineDataContext/Wine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9ac38ab-d4cc-4d0c-bb03-3fde8d1b2412" absoluteBounds="3.0149999999999997, 6.9600000000000009, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ab346ab-0cd7-4542-a6bd-91109d5f1813" absoluteBounds="8, 0.5, 2, 1.4483463541666668">
+      <DataClassMoniker Name="/WineDataContext/Promote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c46d1537-3fca-4154-9165-b19fc846a49d" absoluteBounds="8.015, 0.96, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88fe8163-37d9-4461-9b1f-4992b78ba0f3" absoluteBounds="6.375, 2.75, 2, 1.1111067708333333">
+      <DataClassMoniker Name="/WineDataContext/Taste" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a80fd3f-7031-456e-9063-d95e4e164985" absoluteBounds="6.3900000000000006, 3.21, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eebd544f-8f24-4064-8803-8b20f0febede" absoluteBounds="12.625, 3.375, 2, 1.1111067708333333">
+      <DataClassMoniker Name="/WineDataContext/ProductSupp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50039597-87da-434e-965b-e64545039d9f" absoluteBounds="12.64, 3.835, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.3125 : 7.625); (13.3125 : 4.48610677083333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Supplier/Supplier_ProductSupp" />
+      <nodes>
+        <classShapeMoniker Id="cc79f5be-fd14-4ee5-b37d-104c6638a988" />
+        <classShapeMoniker Id="eebd544f-8f24-4064-8803-8b20f0febede" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="39406371-4c4e-4514-ba41-eebb11714e19" absoluteBounds="9.75, 3.75, 2, 4.4835026041666666">
+      <DataClassMoniker Name="/WineDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72b7c94a-7be8-4cf6-a70c-d4d46274c11c" absoluteBounds="9.765, 4.21, 1.9700000000000002, 3.923502604166667" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.3125 : 8.23350260416667); (10.3125 : 8.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Product/Product_Cart" />
+      <nodes>
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+        <classShapeMoniker Id="d0cde7aa-b312-48be-926b-ca92a28b30fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 4.11805338541667); (12.625 : 4.11805338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Product/Product_ProductSupp" />
+      <nodes>
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+        <classShapeMoniker Id="eebd544f-8f24-4064-8803-8b20f0febede" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 3.99305338541667); (9.75 : 3.99305338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Country/Country_Product" />
+      <nodes>
+        <classShapeMoniker Id="a42f4170-4b68-425d-b674-87ffcfba922e" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.84375 : 2.32334635416667); (5.84375 : 6.89279296875); (9.75 : 6.89279296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Grape/Grape_Product" />
+      <nodes>
+        <classShapeMoniker Id="451a8e82-407d-4618-b2ba-e795ae433c41" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5625 : 1.94834635416667); (11.5625 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Producer/Producer_Product" />
+      <nodes>
+        <classShapeMoniker Id="17a5afb8-7912-458b-97b3-40b08df5c226" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 1.94834635416667); (8.75 : 6.401686953125); (9.75 : 6.401686953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Promote/Promote_Product" />
+      <nodes>
+        <classShapeMoniker Id="4ab346ab-0cd7-4542-a6bd-91109d5f1813" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 2.53667317708333); (5.76041666666667 : 2.53667317708333 : JumpStart); (5.92708333333333 : 2.53667317708333 : JumpEnd); (8.66666666666667 : 2.53667317708333 : JumpStart); (8.83333333333333 : 2.53667317708333 : JumpEnd); (10.6249975 : 2.53667317708333); (10.6249975 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Region/Region_Product" />
+      <nodes>
+        <classShapeMoniker Id="c7f0cefb-7cc0-44dc-97db-90ffa21482d5" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.01779296875); (8.66666666666667 : 5.01779296875 : JumpStart); (8.83333333333333 : 5.01779296875 : JumpEnd); (9.75 : 5.01779296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/SubRegion/SubRegion_Product" />
+      <nodes>
+        <classShapeMoniker Id="c616b58a-c84d-4549-a89f-ba2d35d4d8c6" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 3.2187475); (8.66666666666667 : 3.2187475 : JumpStart); (8.83333333333333 : 3.2187475 : JumpEnd); (10.15624625 : 3.2187475); (10.15624625 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Taste/Taste_Product" />
+      <nodes>
+        <classShapeMoniker Id="88fe8163-37d9-4461-9b1f-4992b78ba0f3" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 7.415146484375); (9.75 : 7.415146484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WineDataContext/Wine/Wine_Product" />
+      <nodes>
+        <classShapeMoniker Id="23dd2b6c-5353-49b8-86e5-316313a90b98" />
+        <classShapeMoniker Id="39406371-4c4e-4514-ba41-eebb11714e19" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
